@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aaluzzi/age-calculator/static/css/main.9f00674a.css",
+    "main.js": "/aaluzzi/age-calculator/static/js/main.eb76a2e9.js",
+    "index.html": "/aaluzzi/age-calculator/index.html",
+    "main.9f00674a.css.map": "/aaluzzi/age-calculator/static/css/main.9f00674a.css.map",
+    "main.eb76a2e9.js.map": "/aaluzzi/age-calculator/static/js/main.eb76a2e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f00674a.css",
+    "static/js/main.eb76a2e9.js"
+  ]
+}
