@@ -12,14 +12,12 @@ function AgeDisplay(prop) {
 
     return (
         <div className="content">
-            <div className="square">
-                <div>{prop.name ? prop.name + " is" : "You are"}</div>
-                <div className="age">{age}</div>
+            <div className="name">{prop.name}</div>
+            <div className="age">         
+                <div>{age}</div>
                 <div>years old</div>
-            </div>
-            <div className="graphic">
-                <ProgressBar age={Math.floor(age)} percentage={age - Math.floor(age)} />
-            </div>
+            </div>    
+            <ProgressBar age={Math.floor(age)} percentage={age - Math.floor(age)} />
         </div>
     ); 
 }

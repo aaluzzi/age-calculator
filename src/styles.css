@@ -1,117 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Martian Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}            
+  background-image: linear-gradient(160deg, #8EC5FC 0%, #E0C3FC 100%);
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  height: 100vh;
+}
 
 .content {
-  text-align: center;
-  background-color: #3a1078;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  font-size: 32px;
-  color: white;
-
-  background: linear-gradient(90deg, #3a1078, #2f58cd);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  gap: 64px;
+  margin-top: 64px;
 }
 
-@keyframes gradient {
-  0% {background-position:0% 50%}
-  50% {background-position:100% 50%}
-  100% {background-position:0% 50%}
+.name {
+  font-size: min(10vw, 64px);
+  font-weight: bold;
 }
 
-.square {
+.age {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 1;
-  font-size: min(32px, 5vh);
-  justify-content: space-around;
-  background-color: #4e31aa;
-  box-shadow: 5px 5px 10px #2b1642;
-  padding: 48px;
-  border-radius: 20px;
-
-  background: linear-gradient(90deg, #4e31aa, #4086e2);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
-}
-
-.graphic {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  font-size: min(10vw, 64px);
+  gap: 16px;
 }
 
 .progress {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
+  width: min(300px, 80vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(#87a3ff var(--progress), rgb(255, 255, 255) 0deg);
 }
 
-.age {
-  font-size: min(42px, 7vh);
-}
-
-.start,.end {
-  font-size: 36px;
-  padding: 0px 10px;
+.percentage {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 3%;
+  width: 100%;
+  margin: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: min(10vw, 36px);
+  background-image: linear-gradient(160deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-size: 300% 300%;
+  background-position-y: bottom;
 }
-
-.bar {
-  margin: 0;
-  flex: auto;
-}
-
-.indicator {
-  width: fit-content;
-  padding-bottom: 5px;
-  animation: indicator-move 30s infinite ease-in-out;
-}
-
-@keyframes indicator-move {
-  50% {
-    transform: translateX(1vw);
-  }
-}
-
-.result {
-  font-size: 64px;
-}
-
-.message {
-  font-size: 40px;
-}
-
-.bar {
-  background:  repeating-conic-gradient(#1d1d1d 0% 25%, rgb(214, 214, 65) 0% 50%);
-  background-repeat: repeat-x;
-  background-size: 20px 16px;
-  background-position: left;
-  animation: ground-move 4s infinite linear;
-}
-
-@keyframes ground-move {
-  0% {
-    background-position: right bottom;
-  }
-  100% {
-    background-position: right 20px bottom;
-  }
-}
-
 
 form {
   display: flex;
@@ -135,12 +79,13 @@ input {
 }
 
 button {
+  width: 100%;
   color: white;
   background-color: #2f58cd;
   border-radius: 18px;
-  font-size: 18px;
+  font-size: 24px;
   font-family: 'Inconsolata', monospace;
-  border: none;
-  box-shadow: 5px 5px 10px #263e7e;
+  background: transparent;
+  border: 5px solid white;
   padding: 16px;
 }

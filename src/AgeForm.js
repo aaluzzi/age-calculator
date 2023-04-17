@@ -1,7 +1,6 @@
 function AgeForm() {
     return (
         <div className="content">
-            <div className="square">
                 <form onSubmit={e => parseInput(e)}> 
                     <div>
                         <label htmlFor="birthday">Birthday</label>
@@ -13,11 +12,10 @@ function AgeForm() {
                     </div>
                     <div>
                         <label htmlFor="name">Your Name (Optional)</label>
-                        <input name="name" type="text" maxLength="22" required/>
+                        <input name="name" type="text" maxLength="22"/>
                     </div>
                     <button type="submit">View Age</button>
-                </form>
-            </div>            
+                </form>              
         </div>
     );
 }
