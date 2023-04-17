@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }            
 
-.App {
+.content {
   text-align: center;
   background-color: #3a1078;
   height: 100vh;
@@ -18,7 +18,7 @@ body {
   font-size: 32px;
   color: white;
 
-  background: linear-gradient(90deg, #3a1078, #2F58CD);
+  background: linear-gradient(90deg, #3a1078, #2f58cd);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
 }
@@ -29,7 +29,7 @@ body {
   100% {background-position:0% 50%}
 }
 
-.age-info {
+.square {
   display: flex;
   flex-direction: column;
   aspect-ratio: 1;
@@ -37,7 +37,7 @@ body {
   justify-content: space-around;
   background-color: #4e31aa;
   box-shadow: 5px 5px 10px #2b1642;
-  padding: 40px;
+  padding: 48px;
   border-radius: 20px;
 
   background: linear-gradient(90deg, #4e31aa, #4086e2);
@@ -110,4 +110,37 @@ body {
   100% {
     background-position: right 20px bottom;
   }
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+  text-align: left;
+}
+
+input {
+  background-color: #ffffff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button {
+  color: white;
+  background-color: #2f58cd;
+  border-radius: 18px;
+  font-size: 18px;
+  font-family: 'Inconsolata', monospace;
+  border: none;
+  box-shadow: 5px 5px 10px #263e7e;
+  padding: 16px;
 }
