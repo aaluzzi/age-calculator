@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [birthday, setBirthday] = useState(null);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     setBirthday(new Date(query.get("birthday")?.replace("-", "/"))); //because Date parsing with hyphen is a different date??
+    setName(query.get("name"));
   }, []);
 
   console.log(birthday);
@@ -20,7 +22,7 @@ function App() {
   }
   return (
     <div className="App">
-        <AgeDisplay birthday={birthday} />
+        <AgeDisplay birthday={birthday} name={name}/>
     </div>
   );
 }

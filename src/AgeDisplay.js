@@ -13,7 +13,7 @@ function AgeDisplay(prop) {
     return (
         <div className="content">
             <div className="square">
-                <div>You are</div>
+                <div>{prop.name ? prop.name + " is" : "You are"}</div>
                 <div className="age">{age}</div>
                 <div>years old</div>
             </div>
