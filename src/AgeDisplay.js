@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import ProgressBar from "./ProgressBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function AgeDisplay(prop) {
     const [age, setAge] = useState(0);

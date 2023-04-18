@@ -1,6 +1,7 @@
 function AgeForm() {
     return (
         <div className="content">
+                <div className="name">Age Calculator</div>
                 <form onSubmit={e => parseInput(e)}> 
                     <div>
                         <label htmlFor="birthday">Birthday</label>
