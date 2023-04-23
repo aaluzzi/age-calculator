@@ -12,7 +12,6 @@ function App() {
     setName(query.get("name"));
   }, []);
 
-  console.log(birthday);
   if (birthday === null || isNaN(birthday)) {
     return (
       <div className="App">

@@ -1,8 +1,8 @@
 function AgeForm() {
     return (
         <div className="content">
-                <div className="name">Age Calculator</div>
-                <form onSubmit={e => parseInput(e)}> 
+                <div className="title">Age Calculator</div>
+                <form onSubmit={e => setSearchParameters(e)}> 
                     <div>
                         <label htmlFor="birthday">Birthday</label>
                         <input name="birthday" type="date" required/>
@@ -21,12 +21,20 @@ function AgeForm() {
     );
 }
 
-function parseInput(e) {
+function setSearchParameters(e) {
     e.preventDefault();
-    window.location.href = "?" 
+
+    let here = new URL(document.location.href);
+    if (e.target.elements.name.value) {
+        here.searchParams.set("name", e.target.elements.name.value);
+    }
+    here.searchParams.set("birthday", e.target.elements.birthday.value + (e.target.elements.time.value.length > 0 ? "-" + e.target.elements.time.value : ""));
+
+    document.location.assign(here);
+    /*window.location.href = "?" 
     + (e.target.elements.name.value ? ("name=" + e.target.elements.name.value.trim()) : "")
-    + (e.target.elements.name.value ? "&birthday=" : "birthday=") + e.target.elements.birthday.value 
-    + (e.target.elements.time.value ? "-" : "") + e.target.elements.time.value;
+    + (e.target.elements.birthday.value ? "&birthday=" : "birthday=") + e.target.elements.birthday.value 
+    + (e.target.elements.time.value ? "-" : "") + e.target.elements.time.value;*/
 }
 
 export default AgeForm;
