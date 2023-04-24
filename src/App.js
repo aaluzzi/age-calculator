@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 function App() {
   const [birthday, setBirthday] = useState(null);
   const [name, setName] = useState("");
+  const [measurement, setMeasurement] = useState("years");
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
@@ -20,8 +21,14 @@ function App() {
     );
   }
   return (
-    <div className="App">
-        <AgeDisplay birthday={birthday} name={name}/>
+    <div className="App" onClick={() => {
+      if (measurement === "days") {
+        setMeasurement("years");
+      } else {
+        setMeasurement("days");
+      }
+    }}>
+        <AgeDisplay birthday={birthday} name={name} measurement={measurement}/>
     </div>
   );
 }
