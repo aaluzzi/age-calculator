@@ -1,17 +1,13 @@
 import AgeDisplay from './AgeDisplay';
 import AgeForm from './AgeForm';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
-  const [birthday, setBirthday] = useState(null);
-  const [name, setName] = useState("");
-  const [measurement, setMeasurement] = useState("years");
+  const query = new URLSearchParams(window.location.search);
+  const birthday = query.get("birthday") ? new Date(query.get("birthday")) : null;
+  const name = query.get("name");
 
-  useEffect(() => {
-    const query = new URLSearchParams(window.location.search);
-    setBirthday(new Date(query.get("birthday")?.replace("-", "/"))); //because Date parsing with hyphen is a different date??
-    setName(query.get("name"));
-  }, []);
+  const [measurement, setMeasurement] = useState("years");
 
   if (birthday === null || isNaN(birthday)) {
     return (
