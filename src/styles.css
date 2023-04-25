@@ -43,7 +43,7 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
   background: conic-gradient(white 360deg, white 0deg);
-  animation: 4s fade-up ease-out, 1s turn_in 1.5s ease-out forwards; 
+  animation: 3s fade-up 0.5s ease-out both, 1s turn_in 1.5s ease-out forwards; 
 }
 
 .percentage {
@@ -129,8 +129,22 @@ button {
   color: white;
   background-color: transparent;
   border-radius: 18px;
-  font-size: 18px;
+  font-size: 24px;
   font-family: 'Martian Mono', monospace;
-  border: 5px solid white;
+  border: 6px solid white;
   padding: 18px;
+  flex: 1;
+  animation: 3s fade-up 0.5s ease-out both; 
+}
+
+.buttons {
+  width: min(300px, 80vw);
+  display: flex;
+  align-items: stretch;
+  gap: 5%;
+}
+
+.active {
+  border: 6px solid #87a3ff;
+  box-shadow: 0px 0px 3px 3px #9db4ff;
 }

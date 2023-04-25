@@ -5,7 +5,7 @@ function AgeForm() {
                 <form onSubmit={e => setSearchParameters(e)}> 
                     <div>
                         <label htmlFor="birthday">Birthday</label>
-                        <input name="birthday" type="date" required/>
+                        <input name="birthday" type="date" max={new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0]} required/>
                     </div>
                     <div>
                         <label htmlFor="birthday">Time of Birth (Optional)</label>
@@ -31,10 +31,6 @@ function setSearchParameters(e) {
     here.searchParams.set("birthday", e.target.elements.birthday.value + (e.target.elements.time.value.length > 0 ? "-" + e.target.elements.time.value : ""));
 
     document.location.assign(here);
-    /*window.location.href = "?" 
-    + (e.target.elements.name.value ? ("name=" + e.target.elements.name.value.trim()) : "")
-    + (e.target.elements.birthday.value ? "&birthday=" : "birthday=") + e.target.elements.birthday.value 
-    + (e.target.elements.time.value ? "-" : "") + e.target.elements.time.value;*/
 }
 
 export default AgeForm;

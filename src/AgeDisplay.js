@@ -4,15 +4,7 @@ import { useState, useEffect } from "react";
 function AgeDisplay(prop) {
     const [age, setAge] = useState(0);
     const [ageCalculator, setAgeCalculator] = useState(() => getYearsOld);
-
-    useEffect(() => {
-        console.log("switching");
-        if (prop.measurement === "years") {
-            setAgeCalculator(() => getYearsOld);
-        } else if (prop.measurement === "days") {
-            setAgeCalculator(() => getDaysOld);
-        }
-    }, [prop.measurement])
+    const [measurement, setMeasurement] = useState("years");
 
     useEffect(() => {
         const id = setInterval(() => setAge(ageCalculator(prop.birthday, new Date())), 10);
@@ -24,9 +16,19 @@ function AgeDisplay(prop) {
             <div className="name">{prop.name}</div>
             <div className="age">         
                 <div>{age}</div>
-                <div>{prop.measurement} old</div>
+                <div>{measurement} old</div>
             </div>    
             <ProgressBar age={Math.floor(age)} percentage={age - Math.floor(age)} />
+            <div className="buttons">
+                <button className={measurement === "years" ? "active" : ""} onClick={() => {
+                    setMeasurement("years");
+                    setAgeCalculator(() => getYearsOld);
+                }}>Years</button>
+                <button className={measurement === "days" ? "active" : ""} onClick={() => {
+                        setMeasurement("days");
+                        setAgeCalculator(() => getDaysOld);
+                }}>Days</button>
+            </div>
         </div>
     ); 
 }
