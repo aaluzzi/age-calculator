@@ -148,8 +148,9 @@ button {
 
 .buttons button {
   border: none;
+  border-radius: 8px;
 }
 
 .active {
-  box-shadow: inset 0 0 0px 6px #87a3ff;
+  background-color: #87a3ff;
 }

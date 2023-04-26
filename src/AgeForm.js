@@ -28,7 +28,7 @@ function setSearchParameters(e) {
     if (e.target.elements.name.value) {
         here.searchParams.set("name", e.target.elements.name.value);
     }
-    here.searchParams.set("birthday", e.target.elements.birthday.value + (e.target.elements.time.value.length > 0 ? "-" + e.target.elements.time.value : ""));
+    here.searchParams.set("birthday", e.target.elements.birthday.value + (e.target.elements.time.value.length > 0 ? "T" + e.target.elements.time.value : ""));
 
     document.location.assign(here);
 }

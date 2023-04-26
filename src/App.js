@@ -3,7 +3,7 @@ import AgeForm from './AgeForm';
 
 function App() {
   const query = new URLSearchParams(window.location.search);
-  const birthday = query.get("birthday") ? new Date(query.get("birthday")?.replace("-", "/")) : null;
+  const birthday = query.get("birthday") ? new Date(query.get("birthday") + (query.get("birthday").includes("T") ? "" : "T00:00")) : null;
   const name = query.get("name");
 
   if (birthday === null || isNaN(birthday) || birthday > new Date()) {
