@@ -1,8 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
 
+.blue-theme {
+  --gradient-start: #8EC5FC;
+  --gradient-end: #E0C3FC;
+  --primary-color: #87a3ff;
+}
+
+.green-theme {
+  --gradient-start: #00dfa0;
+  --gradient-end: #8ce4cb;
+  --primary-color: #25c094;
+}
+
+.orange-theme {
+  --gradient-start: #FBAB7E; 
+  --gradient-end: #F7CE68;
+  --primary-color: #ff951c;
+}
+
+.pink-theme {
+  --gradient-start: #ec62e1;
+  --gradient-end: #dd95cc;
+  --primary-color: #D939CD;
+}
+
+.purple-theme {
+  --gradient-start: #7367F0;
+  --gradient-end: #CE9FFC;
+  --primary-color: #7367F0;
+}
+
+.red-theme {
+  --gradient-start: #df4d4d;;
+  --gradient-end: #fd7d5d;
+  --primary-color: #e61a1a;
+}
+
 html,body {
   height: 100%;
-  background-image: linear-gradient(160deg, #8EC5FC 0%, #E0C3FC 100%);
   margin: 0;
   font-family: 'Martian Mono', monospace;
   -webkit-font-smoothing: antialiased;
@@ -14,6 +49,7 @@ html,body {
 
 #root,.App {
   height: 100%;
+  background-image: linear-gradient(160deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
 }
 
 .content {
@@ -65,7 +101,7 @@ html,body {
   width: 100%;
   margin: 13%;
   border-radius: 50%;
-  background-image: linear-gradient(160deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-image: linear-gradient(160deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
   background-size: 300% 300%;
   background-position-y: bottom;
 }
@@ -89,26 +125,26 @@ html,body {
 }
 
 @keyframes turn_in {
-  5% {background: conic-gradient(#87a3ff calc(var(--progress) * .05), white 0deg)}
-  10% {background: conic-gradient(#87a3ff calc(var(--progress) * .10), white 0deg)}
-  15% {background: conic-gradient(#87a3ff calc(var(--progress) * .15), white 0deg)}
-  20% {background: conic-gradient(#87a3ff calc(var(--progress) * .20), white 0deg)}
-  25% {background: conic-gradient(#87a3ff calc(var(--progress) * .25), white 0deg)}
-  30% {background: conic-gradient(#87a3ff calc(var(--progress) * .30), white 0deg)}
-  35% {background: conic-gradient(#87a3ff calc(var(--progress) * .35), white 0deg)}
-  40% {background: conic-gradient(#87a3ff calc(var(--progress) * .40), white 0deg)}
-  45% {background: conic-gradient(#87a3ff calc(var(--progress) * .45), white 0deg)}
-  50% {background: conic-gradient(#87a3ff calc(var(--progress) * .50), white 0deg)}
-  55% {background: conic-gradient(#87a3ff calc(var(--progress) * .55), white 0deg)}
-  60% {background: conic-gradient(#87a3ff calc(var(--progress) * .60), white 0deg)}
-  65% {background: conic-gradient(#87a3ff calc(var(--progress) * .65), white 0deg)}
-  70% {background: conic-gradient(#87a3ff calc(var(--progress) * .70), white 0deg)}
-  75% {background: conic-gradient(#87a3ff calc(var(--progress) * .75), white 0deg)}
-  80% {background: conic-gradient(#87a3ff calc(var(--progress) * .80), white 0deg)}
-  85% {background: conic-gradient(#87a3ff calc(var(--progress) * .85), white 0deg)}
-  90% {background: conic-gradient(#87a3ff calc(var(--progress) * .90), white 0deg)}
-  95% {background: conic-gradient(#87a3ff calc(var(--progress) * .95), white 0deg)}
-  100% {background: conic-gradient(#87a3ff calc(var(--progress) * 1), white 0deg)}
+  5% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .05), white 0deg)}
+  10% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .10), white 0deg)}
+  15% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .15), white 0deg)}
+  20% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .20), white 0deg)}
+  25% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .25), white 0deg)}
+  30% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .30), white 0deg)}
+  35% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .35), white 0deg)}
+  40% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .40), white 0deg)}
+  45% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .45), white 0deg)}
+  50% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .50), white 0deg)}
+  55% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .55), white 0deg)}
+  60% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .60), white 0deg)}
+  65% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .65), white 0deg)}
+  70% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .70), white 0deg)}
+  75% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .75), white 0deg)}
+  80% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .80), white 0deg)}
+  85% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .85), white 0deg)}
+  90% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .90), white 0deg)}
+  95% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .95), white 0deg)}
+  100% {background: conic-gradient(var(--primary-color) calc(var(--progress) * 1), white 0deg)}
 }
 
 form {
@@ -126,7 +162,7 @@ form > div {
   width: 100%;
 }
 
-input {
+input,select {
   background-color: white;
   border: none;
   border-radius: 8px;
@@ -163,5 +199,5 @@ button {
 }
 
 .active {
-  background-color: #87a3ff;
+  background-color: var(--primary-color);
 }
