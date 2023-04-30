@@ -1,0 +1,35 @@
+.blue-theme {
+    --gradient-start: #8EC5FC;
+    --gradient-end: #E0C3FC;
+    --primary-color: #87a3ff;
+}
+
+.green-theme {
+    --gradient-start: #00dfa0;
+    --gradient-end: #8ce4cb;
+    --primary-color: #25c094;
+}
+
+.orange-theme {
+    --gradient-start: #FBAB7E;
+    --gradient-end: #F7CE68;
+    --primary-color: #ff951c;
+}
+
+.pink-theme {
+    --gradient-start: #ec62e1;
+    --gradient-end: #dd95cc;
+    --primary-color: #D939CD;
+}
+
+.purple-theme {
+    --gradient-start: #7367F0;
+    --gradient-end: #CE9FFC;
+    --primary-color: #7367F0;
+}
+
+.red-theme {
+    --gradient-start: #df4d4d;
+    --gradient-end: #fd7d5d;
+    --primary-color: #e61a1a;
+}

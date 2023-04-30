@@ -1,5 +1,6 @@
-import AgeDisplay from './AgeDisplay';
-import AgeForm from './AgeForm';
+import AgeDisplay from './components/AgeDisplay';
+import AgeForm from './components/AgeForm';
+import './styles/themes.css'
 import { useState } from 'react';
 
 const themes = ["Blue", "Green", "Orange", "Pink", "Purple", "Red"];
@@ -9,7 +10,6 @@ function App() {
   const birthday = query.get("birthday") ? new Date(query.get("birthday") + (query.get("birthday").includes("T") ? "" : "T00:00")) : null;
   const name = query.get("name");
   const [theme, setTheme] = useState((themes[query.get("color")] ? themes[query.get("color")].toLowerCase() : "blue") + "-theme");
-
 
   if (birthday === null || isNaN(birthday) || birthday > new Date()) {
     return (

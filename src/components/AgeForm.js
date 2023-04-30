@@ -1,3 +1,5 @@
+import '../styles/form.css'
+
 function AgeForm(prop) {
     return (
         <div className="content">

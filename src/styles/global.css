@@ -1,41 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
 
-.blue-theme {
-  --gradient-start: #8EC5FC;
-  --gradient-end: #E0C3FC;
-  --primary-color: #87a3ff;
-}
-
-.green-theme {
-  --gradient-start: #00dfa0;
-  --gradient-end: #8ce4cb;
-  --primary-color: #25c094;
-}
-
-.orange-theme {
-  --gradient-start: #FBAB7E; 
-  --gradient-end: #F7CE68;
-  --primary-color: #ff951c;
-}
-
-.pink-theme {
-  --gradient-start: #ec62e1;
-  --gradient-end: #dd95cc;
-  --primary-color: #D939CD;
-}
-
-.purple-theme {
-  --gradient-start: #7367F0;
-  --gradient-end: #CE9FFC;
-  --primary-color: #7367F0;
-}
-
-.red-theme {
-  --gradient-start: #df4d4d;;
-  --gradient-end: #fd7d5d;
-  --primary-color: #e61a1a;
-}
-
 html,body {
   height: 100%;
   margin: 0;
@@ -43,7 +7,6 @@ html,body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
-  font-size: 32px;
   text-align: center;
 }
 
@@ -56,7 +19,7 @@ html,body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: min(64px, 10%);
+  gap: min(64px, 9%);
   font-size: min(9vmin, 48px);
   height: 85%;
 }
@@ -80,17 +43,11 @@ html,body {
 .progress {
   display: flex;
   flex-shrink: 1;
-  flex-basis: 400px;
+  flex-basis: 350px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: conic-gradient(white 360deg, white 0deg);
   animation: 3s fade-up 0.5s ease-out both, 1s turn_in 1.5s ease-out forwards; 
-}
-
-@media (max-height: 650px) {
-  .progress {
-    display: none;
-  }
 }
 
 .percentage {
@@ -145,29 +102,6 @@ html,body {
   90% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .90), white 0deg)}
   95% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .95), white 0deg)}
   100% {background: conic-gradient(var(--primary-color) calc(var(--progress) * 1), white 0deg)}
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  font-size: 18px;
-}
-
-form > div {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: left;
-  width: 100%;
-}
-
-input,select {
-  background-color: white;
-  border: none;
-  border-radius: 8px;
-  font-family: 'Martian Mono', monospace;
-  padding: 8px;
 }
 
 button {
