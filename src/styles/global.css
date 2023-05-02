@@ -55,7 +55,7 @@ html,body {
 
 /*Has to be a separate div to only replay this animation on rerender*/
 .circle-percentage {
-  animation: turn_in 1s ease-out forwards; 
+  animation: turn_in 0.75s ease-out forwards; 
 }
 
 .percentage {
@@ -69,6 +69,10 @@ html,body {
   background-image: linear-gradient(160deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
   background-size: 300% 300%;
   background-position-y: bottom;
+}
+
+.percentage div {
+  animation: tick 0.25s; 
 }
 
 @keyframes fade-up {
@@ -110,6 +114,12 @@ html,body {
   90% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .90), white 0deg)}
   95% {background: conic-gradient(var(--primary-color) calc(var(--progress) * .95), white 0deg)}
   100% {background: conic-gradient(var(--primary-color) calc(var(--progress) * 1), white 0deg)}
+}
+
+@keyframes tick {
+  20% {
+    transform: scale(1.25);
+  }
 }
 
 button {
