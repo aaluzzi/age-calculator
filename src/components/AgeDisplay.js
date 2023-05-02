@@ -13,7 +13,10 @@ function AgeDisplay(prop) {
 
     return (
         <div className="content">
-            <div className="name">{prop.name}</div>
+            <div className="header">
+                <div className="name">{prop.name}</div>
+                <div className="birthday">Born on {prop.birthday.toLocaleString('default', {month: 'short', day: 'numeric', year: 'numeric'})}</div>
+            </div>
             <div className="age">
                 <div>{age}</div>
                 <div>{measurement} old</div>
