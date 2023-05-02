@@ -18,7 +18,7 @@ function AgeDisplay(prop) {
                 <div>{age}</div>
                 <div>{measurement} old</div>
             </div>
-            <ProgressBar age={Math.floor(age)} percentage={age - Math.floor(age)} />
+            <ProgressBar age={Math.floor(age)} percentage={age - Math.floor(age)} measurement={measurement} />
             <div className="buttons">
                 <button className={measurement === "years" ? "active" : ""} onClick={() => {
                     setMeasurement("years");

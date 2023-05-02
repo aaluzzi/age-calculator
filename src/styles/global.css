@@ -37,17 +37,25 @@ html,body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  animation: 3s fade-up ease-out;
+  animation: 2.5s fade-up ease-out;
 }
 
-.progress {
+.progress,.circle-percentage {
   display: flex;
   flex-shrink: 1;
   flex-basis: 350px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: conic-gradient(white 360deg, white 0deg);
-  animation: 3s fade-up 0.5s ease-out both, 1s turn_in 1.5s ease-out forwards; 
+}
+
+.progress {
+  animation: 3s fade-up ease-out both;
+}
+
+/*Has to be a separate div to only replay this animation on rerender*/
+.circle-percentage {
+  animation: turn_in 1s ease-out forwards; 
 }
 
 .percentage {
@@ -124,7 +132,7 @@ button {
   justify-content: center;
   border: 5px solid white;
   border-radius: 16px;
-  animation: 3s fade-up 0.5s ease-out both; 
+  animation: 3s fade-up ease-out both; 
 }
 
 .buttons button {
