@@ -16,11 +16,19 @@ form > div {
     text-align: left;
 }
 
+input::-webkit-date-and-time-value {
+    text-align: left;
+}
+
 input,select {
+    appearance: none;
+    font-size: 16px;
+    text-align: left;
     background-color: white;
     border: none;
     border-radius: 8px;
     font-family: 'Martian Mono', monospace;
+    height: 40px;
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
